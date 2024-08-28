@@ -1,0 +1,37 @@
+﻿
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css" />
+
+</head>
+<body>
+    <header>
+        <center>
+      @*       <a href="/home/Index" class="btn btn-primary">Home</a>
+            <a href="/home/AboutUS" class="btn btn-dark">AboutUS</a>
+            <a href="/home/ContactUs" class="btn btn-danger">ContactUs</a>
+            <a href="/home/Privacy" class="btn btn-secondary">Privacy</a>
+ *@
+
+            <a asp-controller="home" asp-action="index" class="btn btn-primary">Home</a>
+            <a asp-controller="home" asp-action="AboutUS" class="btn btn-dark">AboutUS</a>
+            <a asp-controller="home" asp-action="ContactUs" class="btn btn-danger">ContactUs</a>
+            <a asp-controller="home" asp-action="Privacy" class="btn btn-secondary">Privacy</a>
+
+        </center>
+
+    </header>
+
+    <div>
+        @RenderBody()
+    </div>
+    <center>
+        <footer class="fixed-bottom">copy rights &copy; Rawana @DateTime.Now.Year</footer>
+    </center>
+</body>
+</html>
